@@ -15,8 +15,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Navigation/>
-      <body>{children}
+      <head>
+         {/* Metadata and other head elements */}
+      </head>
+      <body>
+        <Navigation></Navigation>
+        {children}
       </body>
     </html>
   )
