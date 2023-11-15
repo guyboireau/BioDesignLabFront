@@ -16,15 +16,20 @@
   }
 }
 
+html {
+  height: 100vh;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
-    background: linear-gradient(
-        to bottom,
-        transparent,
-        rgb(var(--background-end-rgb))
-      )
-      rgb(var(--background-start-rgb));
-    font-family: 'Arial', sans-serif;
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: "Arial", sans-serif;
+  height: 100%;
 }
 
 h1 {
@@ -32,7 +37,7 @@ h1 {
 }
 
 p {
-  color: #666;
+  color: white;
   line-height: 1.6;
 }
 

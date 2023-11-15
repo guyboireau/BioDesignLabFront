@@ -1,7 +1,7 @@
 import React from "react";
 
-const Services = () => {
+const Library = () => {
   return <div>Services</div>;
 };
 
-export default Services;
+export default Library;
