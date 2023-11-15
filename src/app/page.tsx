@@ -1,30 +1,22 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
+import { useRouter } from 'next/router';
 
-export default function BlogArticle() {
+//page de blog
+export default function Home() {
   return (
-    //page de blog
-    <div className="container">
-      <h1>Blog</h1>
-      <div className="row">
-        <div className="col-12 col-md-6">
-          <div className="card mb-4">
-            <Image
-              src="/images/1.jpg"
-              alt="Picture of the author"
-              width={500}
-              height={500}
-            />
+    <>
+      <div className="container mx-auto px-4">
+        <h1>Hello word</h1>
+        <p>This is a content to make our page longer</p>
+        <div className="w-full h-screen bg-green-300"></div>
+        <p>
+          Lorem Ipsum is simply dummy text ...
 
-            <div className="card-body">
-              <h5 className="card-title">Article 1</h5>
-              <p className="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptate, cumque.
-              </p>
-            </div>
-          </div>
-        </div>
+        </p>
+        <div className="w-full h-screen bg-green-300"></div>
       </div>
-    </div>
+    </>
   );
 }
