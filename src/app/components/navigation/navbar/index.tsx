@@ -11,7 +11,7 @@ const Navbar = () => {
         <div className="container mx-auto px-4 h-full">
           <div className="flex justify-between items-center h-full">
             <Logo />
-            <ul className="hidden md:flex gap-x-6 text-white">
+            <ul className="flex md:flex gap-x-6 text-white">
               <li>
                 <Link href="/"><p>Home</p></Link>
               </li>
