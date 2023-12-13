@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
 import Navigation from "./components/navigation/index.client";
 import "./globals.css";
 import { Providers } from "./providers";
 
-const inter = Inter({ subsets: ["latin"] });
+const noto = Noto_Sans({
+  subsets: ["latin"],
+  variable: "--font-noto-sans",
+});
 
 export const metadata: Metadata = {
   title: "Bio Design Lab",
@@ -17,9 +20,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${noto.variable} font-noto-sans`}>
       <Providers>
-        <body className={inter.className}>
+        <body>
           <Navigation />
           {children}
         </body>
