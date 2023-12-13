@@ -6,14 +6,23 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "graphql:compile": "graphql-codegen",
+    "graphql:watch": "yarn graphql:compile -- --watch"
   },
   "dependencies": {
+    "@apollo/client": "^3.8.7",
+    "@apollo/experimental-nextjs-app-support": "^0.5.1",
+    "@parcel/watcher": "^2.3.0",
+    "graphql": "^16.8.1",
     "next": "13.5.6",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/client-preset": "^4.1.0",
+    "@graphql-typed-document-node/core": "^3.2.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -22,6 +31,6 @@
     "eslint-config-next": "13.5.6",
     "postcss": "^8",
     "tailwindcss": "^3",
-    "typescript": "^5"
+    "typescript": "^5.2.2"
   }
 }
