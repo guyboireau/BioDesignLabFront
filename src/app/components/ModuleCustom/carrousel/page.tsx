@@ -17,14 +17,14 @@ import './carrousel.css'; // Assurez-vous de créer ce fichier CSS et de l'impor
 const Carrousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
-    { src: slide1, alt: 'Description de la slide 1' },
-    { src: slide2, alt: 'Description de la slide 2' },
-    { src: slide3, alt: 'Description de la slide 3' },
-    { src: slide4, alt: 'Description de la slide 4' },
-    { src: slide5, alt: 'Description de la slide 5' },
-    { src: slide6, alt: 'Description de la slide 6' },
-    { src: slide7, alt: 'Description de la slide 7' },
-    { src: slide8, alt: 'Description de la slide 8' }
+    { src: slide1, alt: 'Aggriper' },
+    { src: slide2, alt: 'Structure' },
+    { src: slide3, alt: 'Thermorégulation' },
+    { src: slide4, alt: 'Couper' },
+    { src: slide5, alt: 'Consolidation' },
+    { src: slide6, alt: 'Naviger' },
+    { src: slide7, alt: 'Organisationnel' },
+    { src: slide8, alt: 'Proteger' }
   ];
 
 
