@@ -12,6 +12,7 @@ const Navbar = () => {
           <div className="flex justify-between items-center h-full">
             <Logo />
             <ul className="hidden md:flex gap-x-6 text-white">
+
               <li>
                 <Link href="/"><p>Home</p></Link>
               </li>
