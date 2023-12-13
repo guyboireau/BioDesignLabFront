@@ -1,9 +1,10 @@
 import React from 'react';
+import Footer from './page';
 
 const FooterLayout: React.FC = () => {
   return (
     <footer>
-      {/* Contenu du footer */}
+      <Footer />
     </footer>
   );
 };

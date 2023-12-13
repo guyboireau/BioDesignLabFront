@@ -4,6 +4,8 @@ import './globals.css'
 import Navigation from "./components/navigation/index.client";
 import Carrousel from './components/ModuleCustom/carrousel/page';
 import ModuleCustomLayout from './components/ModuleCustom/layout';
+import FooterLayout from './components/footer/layout';
+import Footer from './components/footer/page';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -23,6 +25,8 @@ export default function RootLayout({
       <body>
         <Navigation></Navigation>
         {children}
+        <Footer></Footer>
+
       </body>
     </html>
   )

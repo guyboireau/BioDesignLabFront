@@ -30,6 +30,7 @@ const Carrousel = () => {
   };
 
   return (
+    <>
     <div className="carousel">
       <button onClick={goToPreviousSlide}><Image src={precedent}
         alt="Logo"
@@ -52,8 +53,9 @@ const Carrousel = () => {
         width={32 ? 32 : 32}
         height={32 ? 32 : 32}
         className="relative" /></button>
-
     </div>
+    </>
+    
   );
 };
 
