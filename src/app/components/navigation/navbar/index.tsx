@@ -7,11 +7,12 @@ import exp from "constants";
 const Navbar = () => {
   return (
     <>
-      <div className="w-full h-20 bg-emerald-800 sticky top-0">
+      <div className="w-full h-20 sticky top-0 header">
         <div className="container mx-auto px-4 h-full">
           <div className="flex justify-between items-center h-full">
             <Logo />
-            <ul className="flex md:flex gap-x-6 text-white">
+            <ul className="hidden md:flex gap-x-6 text-white">
+
               <li>
                 <Link href="/"><p>Home</p></Link>
               </li>
@@ -30,8 +31,10 @@ const Navbar = () => {
                   <p>Generator</p>
                 </Link>
               </li>
+              <li>
+              <Button />
+              </li>
             </ul>
-            <Button />
           </div>
         </div>
       </div>

@@ -7,6 +7,6 @@ export default function Home() {
         <h1>Blog</h1>
         <TagList />
       </div>
-    </div>
+    </>
   );
 }

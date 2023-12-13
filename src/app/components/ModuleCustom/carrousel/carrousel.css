@@ -1,0 +1,19 @@
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slides {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .slide {
+    display: none;
+    padding: 10px;
+  }
+  
+  .slide.active {
+    display: block;
+  }

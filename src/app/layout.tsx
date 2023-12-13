@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
 import Navigation from "./components/navigation/index.client";
-import "./globals.css";
-import { Providers } from "./providers";
-
-const inter = Inter({ subsets: ["latin"] });
+import Carrousel from './components/ModuleCustom/carrousel/page';
+import ModuleCustomLayout from './components/ModuleCustom/layout';
+import FooterLayout from './components/footer/layout';
+import Footer from './components/footer/page';
 
 export const metadata: Metadata = {
   title: "Bio Design Lab",
@@ -18,6 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+         {/* Metadata and other head elements */}
+      </head>
       <Providers>
         <body className={inter.className}>
           <Navigation />

@@ -1,0 +1,62 @@
+.button-style {
+    background-color: #76E580; /* couleur de fond */
+    border: none; /* pas de bordure */
+    color: white; /* couleur du texte */
+    padding: 15px 32px; /* padding */
+    /* text-align: center; alignement du texte */
+    text-decoration: none; /* pas de soulignement */
+    /* display: flex; */
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; /* change le curseur en main lorsque vous survolez */
+    transition-duration: 0.4s; /* durée de la transition */
+    border-radius: 8px; /* arrondi des bords */
+  }
+  
+  .button-style:hover {
+    background-color: #76E581; /* couleur de fond lors du survol */
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal{
+    background-color: #76E581;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 50px;
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+    border-radius: 8px;
+    text-align: center;
+
+  }
+  
+  .modal h1 {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .modal-content-carrousel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .modal-content-carrousel div {
+    margin: 10px;
+  }
+  
+  .modal-content-carrousel img {
+    width: 200px;
+    height: 200px;
+  }
