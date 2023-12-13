@@ -6,6 +6,7 @@ import Carrousel from './components/ModuleCustom/carrousel/page';
 import ModuleCustomLayout from './components/ModuleCustom/layout';
 import FooterLayout from './components/footer/layout';
 import Footer from './components/footer/page';
+import { Providers } from './providers';
 
 export const metadata: Metadata = {
   title: "Bio Design Lab",
@@ -23,7 +24,7 @@ export default function RootLayout({
          {/* Metadata and other head elements */}
       </head>
       <Providers>
-        <body className={inter.className}>
+        <body >
           <Navigation />
           {children}
         </body>
