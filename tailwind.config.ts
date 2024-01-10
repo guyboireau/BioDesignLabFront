@@ -65,6 +65,9 @@ const config: Config = {
           light: '#F2F2F2',
         },
       },
+      colors: {
+        'darkblue': '#140821',
+      }
     },
   },
   plugins: [],

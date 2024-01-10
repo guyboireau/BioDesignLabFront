@@ -11,5 +11,6 @@ export default function Home() {
         <div className="w-full h-screen bg-green-300"></div>
       </div>
     </>
+
   );
 }
