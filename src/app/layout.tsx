@@ -5,10 +5,11 @@ import "./globals.css";
 import { Providers } from "./providers";
 
 const noto = Noto_Sans({
-  subsets: ["latin"],
-  variable: "--font-noto-sans",
-  weight: ['400'], // Specify the weight here
- });
+ subsets: ["latin"],
+ variable: "--font-noto-sans",
+ weight: ['400', '700'],
+ display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Bio Design Lab",
