@@ -1,11 +1,13 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+import type { Metadata } from "next";
+import { Noto_Sans } from "next/font/google";
 import Navigation from "./components/navigation/index.client";
-import Carrousel from './components/ModuleCustom/carrousel/page';
-import ModuleCustomLayout from './components/ModuleCustom/layout';
-import FooterLayout from './components/footer/layout';
-import Footer from './components/footer/page';
+import "./globals.css";
+import { Providers } from "./providers";
+
+const noto = Noto_Sans({
+  subsets: ["latin"],
+  variable: "--font-noto-sans",
+});
 
 export const metadata: Metadata = {
   title: "Bio Design Lab",
@@ -18,12 +20,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-         {/* Metadata and other head elements */}
-      </head>
+    <html lang="en" className={`${noto.variable} font-noto-sans`}>
       <Providers>
-        <body className={inter.className}>
+        <body>
           <Navigation />
           {children}
         </body>

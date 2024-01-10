@@ -5,17 +5,22 @@ import Carrousel from './carrousel/page';
 
 import './layout.css';
 
+interface Image {
+    src: string;
+    alt: string;
+}
+
 const Layout: React.FC = () => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
-    const [selectedImages, setSelectedImages] = useState<string[]>([]);
+    const [selectedImages, setSelectedImages] = useState<Image[]>([]);
 
     const handleSubmit = () => {
         const activeSlides = document.getElementsByClassName('slide active');
-        const images: string[] = [];
+        const images: Image[] = [];
         for (let i = 0; i < activeSlides.length; i++) {
             if (activeSlides[i] instanceof HTMLElement) {
                 const image = activeSlides[i].children[0] as HTMLImageElement;
-                images.push(image.src);
+                images.push({ src: image.src, alt: image.alt });
             }
         }
         setSelectedImages(images);
@@ -39,10 +44,10 @@ const Layout: React.FC = () => {
                 <h1>Vous avez choisi les images suivantes :</h1>
                 <div className="modal-content">
                     <div className="modal-content-carrousel">
-                        {selectedImages.map((src, index) => (
+                        {selectedImages.map((image, index) => (
                             <div key={index}>
-                                <img src={src} alt={`Image sélectionnée ${index + 1}`} />
-                                <p style={{ color: 'black' }}>texte explicatif {index + 1}</p>
+                                <img src={image.src} alt={image.alt} />
+                                <p>{image.alt}</p>
                             </div>
                         ))}
                     </div>
