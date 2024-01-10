@@ -7,7 +7,8 @@ import { Providers } from "./providers";
 const noto = Noto_Sans({
   subsets: ["latin"],
   variable: "--font-noto-sans",
-});
+  weight: ['400'], // Specify the weight here
+ });
 
 export const metadata: Metadata = {
   title: "Bio Design Lab",
