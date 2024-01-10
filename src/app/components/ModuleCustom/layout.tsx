@@ -1,9 +1,10 @@
 "use client";
-import React, { useState } from 'react';
+import React,{useState}  from 'react';
 import Modal from 'react-modal';
 import Carrousel from './carrousel/page';
 
 import './layout.css';
+import Image from 'next/image';
 
 interface Image {
     src: string;
@@ -46,7 +47,7 @@ const Layout: React.FC = () => {
                     <div className="modal-content-carrousel">
                         {selectedImages.map((image, index) => (
                             <div key={index}>
-                                <img src={image.src} alt={image.alt} />
+                                <Image src={image.src} alt={image.alt} />
                                 <p>{image.alt}</p>
                             </div>
                         ))}
