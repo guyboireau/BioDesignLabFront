@@ -6,22 +6,28 @@ import React from "react";
 
 // IT IS ONLY FOR DEMO PURPOSES: modify this component to fit the project needs
 
-const TagList = () => {
+const TagList = ({ className }: { className?: string }) => {
   const { loading, error, data, fetchMore } = useQuery(TAGS_QUERY, {
     variables: { first: 2 },
   });
 
   return (
-    <div>
+    <div className={className}>
       <h2>Tags</h2>
       {data && data.tags && (
-        <ul>
-          {data.tags.edges.map(({ node: tag }) => (
-            <li key={tag.id}>
-              {tag.name}: {tag.description}
-            </li>
-          ))}
-        </ul>
+        <>
+          {data.tags.edges.length === 0 ? (
+            <p>No tags</p>
+          ) : (
+            <ul>
+              {data.tags.edges.map(({ node: tag }) => (
+                <li key={tag.id}>
+                  {tag.name}: {tag.description}
+                </li>
+              ))}
+            </ul>
+          )}
+        </>
       )}
       {loading && <p>Loading...</p>}
       {error && <p>Error: {error.message}</p>}

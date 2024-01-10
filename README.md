@@ -6,16 +6,12 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
 Keep track of graphql schema changes:
 
 ```bash
 npm run graphql:watch
-# or
-yarn graphql:watch
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
