@@ -10,13 +10,31 @@ h1 {
   @apply text-4xl font-bold;
 }
 
+
 h2 {
   @apply text-3xl font-semibold;
+
+html {
+  height: 100vh;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: "Arial", sans-serif;
+  height: 100%;
+
 }
 
 h3 {
   @apply text-2xl font-semibold;
 }
+
 
 h4 {
   @apply text-xl font-semibold;
@@ -31,5 +49,15 @@ h6 {
 }
 
 p {
+  color: white;
+  line-height: 1.6;
   @apply text-base;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
