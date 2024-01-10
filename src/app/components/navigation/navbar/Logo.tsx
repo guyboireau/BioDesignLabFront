@@ -32,13 +32,13 @@ const Logo = () => {
   }, [width]);
 
   return (
-    <Link href="/"
+    <Link href="/" className="flex justify-start"
       style={{ display: showButton ? "none" : "block" }}>
         <Image
           src={logo}
           alt="Logo"
-          width={width < 64 ? 64 : 64}
-          height= {width < 64 ? 64 : 64}
+          width={width < 600 ? 64 : 128}
+          height= {width < 600 ? 64 : 128}
           className="relative"
         />
     </Link>
