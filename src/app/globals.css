@@ -2,19 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255; */
+body {
+  @apply h-screen w-screen flex flex-col;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0; */
-  }
+h1 {
+  @apply text-4xl font-bold;
 }
+
+
+h2 {
+  @apply text-3xl font-semibold;
 
 html {
   height: 100vh;
@@ -30,21 +28,36 @@ body {
     rgb(var(--background-start-rgb));
   font-family: "Arial", sans-serif;
   height: 100%;
+
 }
 
-h1 {
-  color: #333;
+h3 {
+  @apply text-2xl font-semibold;
+}
+
+
+h4 {
+  @apply text-xl font-semibold;
+}
+
+h5 {
+  @apply text-lg font-semibold;
+}
+
+h6 {
+  @apply text-base font-semibold;
 }
 
 p {
   color: white;
   line-height: 1.6;
+  @apply text-base;
 }
 
 img {
   max-width: 100%;
   height: auto;
 }
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities;

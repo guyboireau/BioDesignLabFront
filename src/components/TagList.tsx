@@ -12,8 +12,8 @@ const TagList = () => {
   });
 
   return (
-    <div className="container">
-      <h1>Tags</h1>
+    <div>
+      <h2>Tags</h2>
       {data && data.tags && (
         <ul>
           {data.tags.edges.map(({ node: tag }) => (
