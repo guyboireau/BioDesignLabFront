@@ -11,12 +11,13 @@ h1 {
 }
 
 
+
 h2 {
   @apply text-3xl font-semibold;
 }
 
-html {
-  height: 100vh;
+h3 {
+  @apply text-2xl font-semibold;
 }
 
 .hover-image-link {
@@ -72,12 +73,13 @@ p {
   color: white;
   line-height: 1.6;
   @apply text-base;
+
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+p {
+  @apply text-base;
 }
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+

@@ -19,6 +19,9 @@ const config: Config = {
         "alice-gray": { DEFAULT: "#E5EBF0", dark: "#E5EBF0" },
       
       },
+      colors: {
+        'darkblue': '#140821',
+      }
     },
   },
   plugins: [],

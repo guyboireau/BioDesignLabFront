@@ -14,6 +14,7 @@ const Navbar = () => {
             <Logo />
           </div>
             <ul className="hidden md:flex gap-x-6 text-white ">
+
               <li>
                 <Link href="/"><p>Home</p></Link>
               </li>
@@ -32,8 +33,10 @@ const Navbar = () => {
                   <p>Generator</p>
                 </Link>
               </li>
+              <li>
+              <Button />
+              </li>
             </ul>
-            <Button />
           </div>
         </div>
       </div>
