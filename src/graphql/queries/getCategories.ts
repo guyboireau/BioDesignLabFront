@@ -1,4 +1,4 @@
-import { gql } from "@/__generated__/gql";
+import { gql } from "@/__generated__";
 
 const CATEGORIES_QUERY = gql(`
     query getCategories($first: Int, $after: String = "") {

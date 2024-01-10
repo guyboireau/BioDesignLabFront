@@ -1,4 +1,4 @@
-import { gql } from "@/__generated__/gql";
+import { gql } from "@/__generated__";
 
 const TAGS_QUERY = gql(`
   query getTags($first: Int, $after: String) {
