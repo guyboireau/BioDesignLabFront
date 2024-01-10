@@ -7,7 +7,7 @@ import exp from "constants";
 const Navbar = () => {
   return (
     <>
-      <div className="w-full h-20 bg-emerald-800 sticky top-0 bg-primary">
+      <div className="w-full h-20 bg-emerald-800 sticky top-0 bg-dark-purple">
         <div className="container mx-auto px-4 h-full">
           <div className="flex justify-between items-center h-full">$
           <div className="flex justify-start items-center h-full">

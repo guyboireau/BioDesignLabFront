@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${noto.variable} font-noto-sans`}>
       <Providers>
-        <body className={inter.className}>
+        <body>
 
           <Navigation />
           {children}
