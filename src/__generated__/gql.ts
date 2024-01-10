@@ -13,6 +13,7 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * Therefore it is highly recommended to use the babel or swc plugin for production.
  */
 const documents = {
+    "\n    query getCategories($first: Int, $after: String = \"\") {\n        categories(first: $first, after: $after, where: {parent: null}) {\n            pageInfo {\n                endCursor\n                hasNextPage\n            }\n            edges {\n                cursor\n                node {\n                    id\n                    name\n                    slug\n                    description\n                }\n            }\n        }\n    }\n": types.GetCategoriesDocument,
     "\n  query getTags($first: Int, $after: String) {\n    tags(first: $first, after: $after) {\n      pageInfo {\n        endCursor\n        hasNextPage\n      }\n      edges {\n        cursor\n        node {\n          id\n          name\n          slug\n          description\n        }\n      }\n    }\n  }\n": types.GetTagsDocument,
 };
 
@@ -30,6 +31,10 @@ const documents = {
  */
 export function gql(source: string): unknown;
 
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(source: "\n    query getCategories($first: Int, $after: String = \"\") {\n        categories(first: $first, after: $after, where: {parent: null}) {\n            pageInfo {\n                endCursor\n                hasNextPage\n            }\n            edges {\n                cursor\n                node {\n                    id\n                    name\n                    slug\n                    description\n                }\n            }\n        }\n    }\n"): (typeof documents)["\n    query getCategories($first: Int, $after: String = \"\") {\n        categories(first: $first, after: $after, where: {parent: null}) {\n            pageInfo {\n                endCursor\n                hasNextPage\n            }\n            edges {\n                cursor\n                node {\n                    id\n                    name\n                    slug\n                    description\n                }\n            }\n        }\n    }\n"];
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
