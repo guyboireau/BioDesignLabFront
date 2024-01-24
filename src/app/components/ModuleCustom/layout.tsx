@@ -47,7 +47,7 @@ const Layout: React.FC = () => {
                     <div className="modal-content-carrousel">
                         {selectedImages.map((image, index) => (
                             <div key={index}>
-                                <Image src={image.src} alt={image.alt} />
+                                <Image src={image.src} alt={image.alt} width={256 ? 256 : 256} height={256 ? 256 : 256}></Image>
                                 <p>{image.alt}</p>
                             </div>
                         ))}
