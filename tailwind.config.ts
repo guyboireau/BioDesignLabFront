@@ -22,7 +22,7 @@ const config: Config = {
         'royal-blue': { DEFAULT: '#002266', dark: '#002266' },
         'argentinian-blue': { DEFAULT: '#65AFFF', dark: '#65AFFF' },
         'alice-gray': { DEFAULT: '#E5EBF0', dark: '#E5EBF0' },
-        'darkblue': '#140821',
+        'dark-blue': { DEFAULT: '#140821', dark: '#140821' },
       },
     },
   },
