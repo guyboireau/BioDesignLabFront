@@ -3,11 +3,13 @@ import Logo from "./Logo";
 import Button from "./Button";
 import Menu from "./Menu";
 
+
 const Navbar = () => {
   return (
     <>
       <div className="w-full h-20 bg-dark-purple sticky top-0 header">
         <div className="container mx-auto px-4 h-full">
+
           <div className="flex justify-between items-center h-full">
             <Logo />
               <ul className="hidden md:flex gap-x-6 text-white">
