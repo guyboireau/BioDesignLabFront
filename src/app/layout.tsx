@@ -3,12 +3,13 @@ import { Noto_Sans } from "next/font/google";
 import Navigation from "./components/navigation/index.client";
 import "./globals.css";
 import { Providers } from "./providers";
+import Footer from "./components/footer/page";
 
 const noto = Noto_Sans({
- subsets: ["latin"],
- variable: "--font-noto-sans",
- weight: ['400', '700'],
- display: "swap",
+  subsets: ["latin"],
+  variable: "--font-noto-sans",
+  weight: ['400', '700'],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -22,13 +23,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${noto.variable} font-noto-sans`}>
+    <html lang="en" className={`${noto.variable} font-noto-sans`}>    
       <Providers>
         <body>
-          <Navigation />
-          {children}
+        <Navigation />
+          {children}          
         </body>
       </Providers>
+      <Footer/>
     </html>
   );
 }

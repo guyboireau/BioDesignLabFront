@@ -5,8 +5,6 @@ import { useQuery } from "@apollo/experimental-nextjs-app-support/ssr";
 import Image from "next/image";
 import React from "react";
 
-// IT IS ONLY FOR DEMO PURPOSES: modify this component to fit the project needs
-
 const CategoryList = ({ className }: { className?: string }) => {
   const { loading, error, data, fetchMore } = useQuery(CATEFORIES_QUERY, {
     variables: { first: 5 },
@@ -82,7 +80,9 @@ const CategoryList = ({ className }: { className?: string }) => {
         >
           Fetch more
         </button>
+
       )}
+
     </div>
   );
 };

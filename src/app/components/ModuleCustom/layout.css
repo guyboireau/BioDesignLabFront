@@ -60,3 +60,22 @@
     width: 200px;
     height: 200px;
   }
+  .function-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .function-options .card {
+    flex-basis: calc(33.33% - 20px); /* 33.33% pour 3 items en largeur, 20px pour les marges */
+    margin: 10px; /* marge autour de chaque carte */
+    height: calc(100% / 4); /* 100% / 4 pour 4 items en hauteur */
+    /* box-sizing: border-box; pour inclure la marge et le padding dans la largeur et la hauteur */
+  }
+  .generator{
+    display: flex;
+  }
+
+  .mode-options, .function-options{
+    flex:1;
+  }
