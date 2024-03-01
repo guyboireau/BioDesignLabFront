@@ -23,7 +23,7 @@ const Layout: React.FC = () => {
         for (const image of selectedImages) {
             if (image.src) {
                 const { src, alt } = image as ImageProps; 
-                images.push({ src, alt });
+                images.push({ src: src as string, alt });
             }
         }
         // setSelectedImages(images);
@@ -51,6 +51,11 @@ const Layout: React.FC = () => {
         };
     }) ?? [];
 
+    const stringSrcImages = images.map(image => ({
+        ...image,
+        src: typeof image.src === 'string' ? image.src : '', // Ensure src is a string
+    }));
+
 
     return (
         <>
@@ -67,7 +72,7 @@ const Layout: React.FC = () => {
                 <div className="flex flex-wrap justify-around bg-royal-blue rounded-lg" >
                     <div className="w-1/2 mx-2 h-1/3 box-border ">
                         <h3>Choisis les fonctions que tu souhaites donner à ton objet</h3>
-                        <ImageGrid images={images ?? []} onImageSelect={handleImagesSelected} />
+                        <ImageGrid images={stringSrcImages ?? []} onImageSelect={handleImagesSelected} />
                         <div className="flex justify-center items-center " >
                             <button className="bg-green-400 text-white py-4 px-8 text-center no-underline font-normal text-lg mx-1 my-2 cursor-pointer transition-all duration-200 rounded-lg hover:bg-green-500" onClick={handleSubmit}>Valider la configuration</button>
                         </div>
