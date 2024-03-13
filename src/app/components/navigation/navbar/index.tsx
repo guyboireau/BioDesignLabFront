@@ -1,38 +1,25 @@
 import React from "react";
-import Link from "next/link";
 import Logo from "./Logo";
-import Button from "./Button";
-import exp from "constants";
+import Menu from "./Menu";
+
 
 const Navbar = () => {
   return (
     <>
-      <div className="w-full h-20 sticky top-0 header">
+      <div className="w-full h-20 bg-dark-blue sticky top-0 header">
         <div className="container mx-auto px-4 h-full">
+
           <div className="flex justify-between items-center h-full">
             <Logo />
             <ul className="hidden md:flex gap-x-6 text-white">
-
               <li>
-                <Link href="/"><p>Home</p></Link>
+                <Menu title="Créer" link="/generator"/>
               </li>
               <li>
-                <Link href="/about">
-                  <p>About Us</p>
-                </Link>
+                <Menu title="S'inspirer" link="/library"/>
               </li>
               <li>
-                <Link href="/librairy">
-                  <p>Librairy</p>
-                </Link>
-              </li>
-              <li>
-                <Link href="/generator">
-                  <p>Generator</p>
-                </Link>
-              </li>
-              <li>
-              <Button />
+                <Menu title="Découvrir" link="/functions"/>
               </li>
             </ul>
           </div>

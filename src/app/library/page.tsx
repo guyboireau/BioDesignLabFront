@@ -53,6 +53,7 @@ type CheckboxProps = {
 
 type FilterLabelProps = {
   label: string;
+
 };
 
 const SvgFilterClose = () => {

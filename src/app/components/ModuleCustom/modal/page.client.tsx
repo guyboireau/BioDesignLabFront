@@ -4,10 +4,6 @@ import Modal from 'react-modal';
 const Layout: React.FC = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
-  const openModal = () => {
-    setModalIsOpen(true);
-  };
-
 const closeModal = () => {
     setModalIsOpen(false);
 };

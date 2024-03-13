@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import  logo  from '../../../../images/logo.png';
+import headerLogo from '../../../../images/logo.svg';
 
 const Logo = () => {
   const [width, setWidth] = useState(0);
@@ -9,7 +9,7 @@ const Logo = () => {
 
   const updateWidth = () => {
     setWidth(window.innerWidth);
-  };
+  };  
 
   const changeNavButton = () => {
     if (window.scrollY >= 400 && width < 768) {
@@ -32,17 +32,12 @@ const Logo = () => {
   }, [width]);
 
   return (
+    
     <Link href="/"
       style={{ display: showButton ? "none" : "block" }}>
-        <Image
-          src={logo}
-          alt="Logo"
-          width={width < 64 ? 64 : 64}
-          height= {width < 64 ? 64 : 64}
-          className="relative"
-        />
+        <Image src={headerLogo} alt="BioDesign Lab Logo"/>
     </Link>
-  );
+  );  
 };
 
 export default Logo;
