@@ -3,33 +3,37 @@ import React, { useEffect, useState } from 'react';
 import './layout.css';
 import Image, { ImageProps } from 'next/image';
 import ImageGrid from '@/components/ImageGrid';
-import CATEGORIES_QUERY from "@/graphql/queries/getCategories";
+import SUBCATEGORIES_QUERY from "@/graphql/queries/getSubCategories";
 import { useQuery } from "@apollo/experimental-nextjs-app-support/ssr";
 import LoadingBar from '../progressbar';
+import ImageModal from './modal/ImageModal';
 interface Image {
     src: string;
     alt: string;
 }
 
 const Layout: React.FC = () => {
-    const { loading, error, data, fetchMore } = useQuery(CATEGORIES_QUERY, {
+    const { loading, error, data, fetchMore } = useQuery(SUBCATEGORIES_QUERY, {
         variables: { first: 8 },
     });
     const [selectedImages, setSelectedImages] = useState<ImageProps[]>([]);
     const [progress, setProgress] = useState(0);
+    const [childrenToShow, setChildrenToShow] = useState<any[]>([]);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleSubmit = () => {
         const images: Image[] = [];
         for (const image of selectedImages) {
             if (image.src) {
-                const { src, alt } = image as ImageProps; 
+                const { src, alt } = image as ImageProps;
                 images.push({ src: src as string, alt });
             }
         }
-        // setSelectedImages(images);
         setProgress(progress + 1)
+        const children = selectedImages.flatMap(image => image.children);
+        setChildrenToShow(children);
+        setIsModalOpen(true);
         console.log(data);
-
     };
 
     const handleImagesSelected = (image: ImageProps) => {
@@ -42,8 +46,11 @@ const Layout: React.FC = () => {
         }
     };
 
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+    };
 
-    const images: ImageProps[] = data?.categories?.edges?.map((edge) => {
+    const images: ImageProps[] = data?.categories?.edges?.map((edge: any) => {
         const metadata = JSON.parse(edge.node.description ?? '{}');
         return {
             src: metadata?.image,
@@ -59,7 +66,7 @@ const Layout: React.FC = () => {
 
     return (
         <>
-            <LoadingBar progress={progress} />            
+            <LoadingBar progress={progress} />
             <h2>Crée un outil biomimétique</h2>
             <div className="flex pb-8 m-5" >
                 <div className="flex-wrap mr-8 w-1/4">
@@ -78,8 +85,14 @@ const Layout: React.FC = () => {
                         </div>
                     </div>
                 </div>
+                {isModalOpen && (
+                    <ImageModal onClose={handleCloseModal}>
+                        {childrenToShow}
+                    </ImageModal>
+                )}
+
             </div>
-        </> 
+        </>
     );
 };
 
